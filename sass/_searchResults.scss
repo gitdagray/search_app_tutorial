@@ -1,0 +1,93 @@
+.results {
+  @include flexColumn;
+  padding: 0.5rem 1rem;
+  width: 90vw;
+  @include mq(768px) {
+    width: 75vw;
+  }
+  @include mq(1025px) {
+    width: 55vw;
+  }
+
+  .statsBar {
+    width: 100%;
+
+    .stats {
+      color: $stats-color;
+      font-size: 0.75rem;
+      @include mq(768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .searchResults {
+    width: 100%;
+
+    .resultItem {
+      @include flexColumn;
+      width: 100%;
+      padding: 0.25rem 0;
+      @include mq(768px) {
+        padding: 0.5rem 0;
+      }
+
+      .resultTitle {
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.25;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 3px 2px;
+        @include mq(768px) {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+          margin-bottom: 0.5rem;
+        }
+
+        a {
+          color: $link-color;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        a:visited {
+          color: $link-visited-color;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+
+        a:focus {
+          outline: 2px solid $link-outline-color;
+        }
+      }
+
+      .resultContents {
+        display: flex;
+        width: 100%;
+
+        .resultImage {
+          margin-right: 0.5rem;
+        }
+
+        .resultText {
+          flex-grow: 1;
+          font-size: 14px;
+          line-height: 20px;
+          max-height: 60px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          @include mq(768px) {
+            font-size: 1rem;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
