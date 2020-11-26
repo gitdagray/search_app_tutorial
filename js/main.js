@@ -41,7 +41,7 @@ const submitTheSearch = (event) => {
 const processTheSearch = async () => {
   clearStatsLine();
   const searchTerm = getSearchTerm();
-  if (searchTerm === "") return;
+  if (searchTerm === "") return; //TODO:
   const resultArray = await retrieveSearchResults(searchTerm);
   if (resultArray.length) buildSearchResults(resultArray);
   setStatsLine(resultArray.length);

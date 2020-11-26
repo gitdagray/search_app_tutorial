@@ -33,7 +33,7 @@
       text-align: left;
       letter-spacing: 0.1rem;
       border: 0;
-      outline: 0;
+      outline: none;
       min-width: 150px;
       @include mq(768px) {
         font-size: 1.25rem;
